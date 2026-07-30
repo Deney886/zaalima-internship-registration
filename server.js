@@ -1,4 +1,4 @@
-/*const fs = require("fs");
+const fs = require("fs");
 
 if (!fs.existsSync("uploads")) {
     fs.mkdirSync("uploads", { recursive: true });
@@ -11,7 +11,7 @@ if (!fs.existsSync("uploads")) {
         user: "zaalimainternships.in@gmail.com",
         pass: "zazr qkuv xbqc vlxh"
     }
-});*/
+});
   //----------------------------------------->
   const express = require("express");
   const cors = require("cors");
@@ -114,7 +114,7 @@ if (!fs.existsSync("uploads")) {
         success: true,
         message: "Application Submitted Successfully"
     });
-/*transporter.sendMail({
+transporter.sendMail({
     from: '"Zaalima Internships" <zaalimainternships.in@gmail.com>',
     to: ["zaalimainternships.in@gmail.com","deneydasari886@gmail.com"],
     replyTo: "zaalimainternships.in@gmail.com",
@@ -241,7 +241,7 @@ This is an automated confirmation email. Please do not reply directly to this me
 
     
 
-});*/
+});
 
 
           
