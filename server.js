@@ -242,8 +242,8 @@ This is an automated confirmation email. Please do not reply directly to this me
 
   });
 
-  const PORT=5000;
+const PORT = process.env.PORT || 5000;
 
-  app.listen(PORT,()=>{
-      console.log(`Server Running on http://localhost:${PORT}`);
-  });
+app.listen(PORT, () => {
+    console.log(`Server Running on port ${PORT}`);
+});
