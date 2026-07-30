@@ -9,7 +9,7 @@ if (!fs.existsSync("uploads")) {
     service: "gmail",
     auth: {
         user: "zaalimainternships.in@gmail.com",
-        pass: "bvji fjhj vydd spbi"
+        pass: "zazr qkuv xbqc vlxh"
     }
 });
   //----------------------------------------->
