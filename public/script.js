@@ -11,38 +11,35 @@ form.addEventListener("submit", async (e) => {
             body: formData
         });
 
-        const result = await response.json();
+        const text = await response.text();
+        console.log("Server Response:", text);
 
-        //alert(result.message);
+        if (!response.ok) {
+            alert("Server Error");
+            return;
+        }
 
-        //if (result.success) {
-          //  form.reset();
-        //}
-if (result.success) {
+        let result;
 
-    // Clear the form
-    form.reset();
+        try {
+            result = JSON.parse(text);
+        } catch (e) {
+            console.error("Response is not JSON:", text);
+            return;
+        }
 
-    // Redirect to success page
-    window.location.href = "success.html";
-}
-else{
-    alert(result.message);
-}
+        if (result.success) {
+            form.reset();
+            window.location.href = "success.html";
+        } else {
+            alert(result.message);
+        }
+
     } catch (err) {
         console.error(err);
         alert("Something went wrong.");
     }
 });
-
-
-
-
-
-
-
-
-
 
 const resume = document.getElementById("resume");
 const uploadTitle = document.getElementById("uploadTitle");
