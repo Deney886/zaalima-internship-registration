@@ -109,6 +109,11 @@ if (!fs.existsSync("uploads")) {
               success:true,
               message:"Application Submitted Successfully"
           });*/
+
+          res.json({
+        success: true,
+        message: "Application Submitted Successfully"
+    });
 transporter.sendMail({
     from: '"Zaalima Internships" <zaalimainternships.in@gmail.com>',
     to: ["zaalimainternships.in@gmail.com","deneydasari886@gmail.com"],
@@ -234,10 +239,7 @@ This is an automated confirmation email. Please do not reply directly to this me
         console.log(info.response);
     }
 
-    res.json({
-        success: true,
-        message: "Application Submitted Successfully"
-    });
+    
 
 });
 
